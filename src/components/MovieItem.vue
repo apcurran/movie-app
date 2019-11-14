@@ -26,12 +26,27 @@ export default {
   width: 70rem;
   max-width: 90%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
 .home-movie {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+.home-movie:hover {
+  background-color: #999;
+  cursor: pointer;
+}
+
+.home-movie-title {
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .home-movie-img {

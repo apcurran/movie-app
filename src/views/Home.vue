@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <h1 class="home-title">Hello World!</h1>
+    <header class="header">
+      <h1 class="header-home-title">Video 2000</h1>
+    </header>
     <form @submit.prevent="getMovies" class="home-form">
       <input v-model="userSearch" type="text" class="home-form-search" placeholder="Search movie title">
       <input type="submit" value="Get Movies!" class="home-form-submit">
@@ -40,8 +42,35 @@ export default {
     },
     displayMovies(data) {
       this.movieResults = data.results;
-      console.log(this.movieResults);
     }
   }
 }
 </script>
+
+<style>
+
+.header-home-title {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.home-form {
+  margin: 0 auto 4rem auto;
+  width: 30rem;
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.home-form-search {
+  flex: 1 1;
+  font-size: 1rem;
+  padding: 0 .75rem;
+}
+
+.home-form-submit {
+  font-size: 1rem;
+  padding: .75rem 1.75rem;
+}
+
+</style>
