@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <!-- <nav id="nav">
-      <router-link to="/">Home</router-link> |
-    </nav> -->
     <router-view/>
   </div>
 </template>
@@ -15,8 +12,11 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+input,
+button {
   font-family: sans-serif;
+  letter-spacing: .02em;
 }
 
 </style>
