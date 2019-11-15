@@ -99,7 +99,7 @@ export default {
 }
 
 .home-movie:hover {
-  background-color: #999;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .2);
 }
 
 .home-movie-title {
@@ -112,10 +112,16 @@ export default {
 }
 
 .home-movie-info {
-  margin-top: 1.5rem;
-  padding: .8rem 1.75rem;
+  transform: translateY(-200%);
+  padding: 1rem 1.75rem;
   text-transform: uppercase;
   letter-spacing: .04em;
+  font-size: 1.05rem;
+  border-radius: 500px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .4);
+  background-color: #3182CE;
+  color: #fff;
+  border: none;
   cursor: pointer;
 }
 
