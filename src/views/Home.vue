@@ -79,6 +79,10 @@ export default {
   border-radius: 500px 0 0 500px;
 }
 
+.home-form-search::placeholder {
+  color: #ababab;
+}
+
 .home-form-submit {
   font-size: 1rem;
   font-weight: 500;
@@ -104,10 +108,10 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: transparent;
   padding: 1.5rem;
   border-radius: 4px;
   cursor: pointer;
+  transition: box-shadow 120ms ease;
 }
 
 .home-movie:hover {
@@ -115,7 +119,8 @@ export default {
 }
 
 .home-movie-title {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
   margin-bottom: 1.25rem;
 }
 
