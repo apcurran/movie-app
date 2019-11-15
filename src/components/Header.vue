@@ -16,6 +16,7 @@ export default {
   padding: 3rem;
   background-color: #2d3748;
   color: #fff;
+  box-shadow:  0 4px 10px rgba(0, 0, 0, .2);
 }
 
 .header-home-title {

@@ -6,11 +6,10 @@
       <input type="submit" value="Get Movies!" class="home-form-submit">
     </form>
     <section class="movie-items">
-      <article v-for="movie in movieResults" :key="movie.id" class="home-movie">
+      <article @click="showMovieDetails(movie)" v-for="movie in movieResults" :key="movie.id" class="home-movie">
         <h2 class="home-movie-title">{{ movie.title }}</h2>
         <img v-if="movie.poster_path" :src="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" :alt="movie.title" class="home-movie-img">
         <img v-else src="../assets/movie-poster-placeholder.jpg" alt="Movie reel placeholder" class="home-movie-img">
-        <button @click="showMovieDetails(movie)" class="home-movie-info">More Info</button>
       </article>
     </section>
   </div>
@@ -58,8 +57,13 @@ export default {
 
 <style>
 
+.home {
+  min-height: 100vh;
+  background-color: #fefefe;
+}
+
 .home-form {
-  margin: 3rem auto 0 auto;
+  margin: 4rem auto 0 auto;
   width: 30rem;
   max-width: 90%;
   display: flex;
@@ -70,18 +74,25 @@ export default {
   flex: 1 1;
   font-size: 1rem;
   padding: 0 .75rem;
+  border: 1px solid #cbd5e0;
+  border-right: none;
+  border-radius: 500px 0 0 500px;
 }
 
 .home-form-submit {
   font-size: 1rem;
+  font-weight: 500;
   padding: .75rem 1.75rem;
   text-transform: uppercase;
   letter-spacing: .04em;
+  background-color: #9ae6b4;
+  border: none;
+  border-radius: 0 500px 500px 0;
   cursor: pointer;
 }
 
 .movie-items {
-  margin: 3rem auto;
+  margin: 4rem auto;
   width: 70rem;
   max-width: 90%;
   display: grid;
@@ -96,6 +107,7 @@ export default {
   background-color: transparent;
   padding: 1.5rem;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .home-movie:hover {
@@ -103,7 +115,7 @@ export default {
 }
 
 .home-movie-title {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 1.25rem;
 }
 
@@ -111,18 +123,15 @@ export default {
   width: 100%;
 }
 
-.home-movie-info {
-  transform: translateY(-200%);
-  padding: 1rem 1.75rem;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  font-size: 1.05rem;
-  border-radius: 500px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, .4);
-  background-color: #3182CE;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
+@media screen and (max-width: 28em) {
+    .home-form-search {
+      padding: .75rem 1rem;
+      font-size: .9rem;
+    }
 
+    .home-form-submit {
+      padding: .75rem 1rem;
+      font-size: .925rem;
+    }
+}
 </style>

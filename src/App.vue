@@ -15,7 +15,7 @@
 html,
 input,
 button {
-  font-family: sans-serif;
+  font-family: 'Work Sans', sans-serif;
   letter-spacing: .02em;
 }
 
