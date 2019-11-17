@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-      <h1 class="header-title">Video 2000</h1>
+      <img src="../assets/attribution-logo.svg" alt="The Movie Database logo" class="header-logo">
       <router-link class="header-link" :to="{ name: 'Home' }">Search</router-link>
     </header>
 </template>
@@ -21,6 +21,10 @@ export default {
   background-color: #2d3748;
   color: #fff;
   box-shadow:  0 4px 10px rgba(0, 0, 0, .2);
+}
+
+.header-logo {
+  width: 4rem;
 }
 
 .header-link {
