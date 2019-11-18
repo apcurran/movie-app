@@ -129,6 +129,8 @@ export default {
 }
 
 @media screen and (max-width: 28em) {
+    .home-form { margin-top: 2.5rem; }
+
     .home-form-search {
       padding: .75rem 1rem;
       font-size: .9rem;

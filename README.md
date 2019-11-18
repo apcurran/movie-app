@@ -2,7 +2,7 @@
 
 Creating a movie lookup app using The Movie DB API
 
-Project [link](https://movie-app-2d782.firebaseapp.com/)
+Project [link](https://movie-app-2d782.web.app/)
 
 <!-- Insert project img -->
 
