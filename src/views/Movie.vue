@@ -94,26 +94,19 @@ export default {
 }
 
 @media screen and (max-width: 107em) {
-    .movie-info {
-        padding: 0 5rem;
-    }
+    .movie-info { padding: 0 5rem; }
 
-    .movie-info-img {
-        width: 80%;
-    }
+    .movie-info-img { width: 80%; }
 
-    .movie-info-container {
-        margin: 0 3rem;
-    }
+    .movie-info-container { margin-left: 3rem; }
 }
 
 @media screen and (max-width: 62.5em) {
-    .movie-info {
-        padding: 0 3rem;
-    }
+    .movie-info { padding: 0 3rem; }
 
     .movie-info-img {
         width: 100%;
+        justify-self: center;
     }
 }
 
@@ -123,9 +116,18 @@ export default {
         grid-template-columns: 1fr;
     }
 
-    .movie-info-container {
-        margin: 0;
+    .movie-info-img { width: 90%; }
+
+    .movie-info-container { margin: 0; }
+
+    .movie-info-release { margin-top: .25rem; }
+
+    .movie-info-votes {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
+
+    .movie-info-votes--big { font-size: 2rem; }
 }
 
 </style>
