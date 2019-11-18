@@ -1,19 +1,21 @@
-# movie-app
+# Movie-App
 
-## Project setup
-```
-npm install
-```
+Creating a movie lookup app using The Movie DB API
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Project [link](https://movie-app-2d782.firebaseapp.com/)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+<!-- Insert project img -->
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Features:
+
+* Utilizes the Vue JavaScript Framework (with Vue CLI)
+
+* Various API data inserted per movie (e.g., movie title, poster img, release date, voter ratings, description, etc.)
+
+* Clickable movie elements use router links to direct users to movie data route
+
+* V-for, v-if, and v-else usage
+
+* Re-usable Header component
+
+* Mobile-friendly layout
