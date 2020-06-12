@@ -60,6 +60,11 @@ export default {
 
 <style>
 
+a {
+  color: #2d3748;
+  text-decoration: none;
+}
+
 .home {
   min-height: 100vh;
   background-color: #fefefe;
