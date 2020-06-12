@@ -6,7 +6,7 @@
       <input type="submit" value="Get Movies!" class="home-form-submit">
     </form>
     <section class="movie-items">
-      <router-link :to="'/movie/' + movie.id" v-for="movie in movieResults" :key="movie.id">
+      <router-link :to="`/movie/${movie.id}`" v-for="movie in movieResults" :key="movie.id">
         <article  class="home-movie">
           <h2 class="home-movie-title">{{ movie.title }}</h2>
           <img v-if="movie.poster_path" :src="`https://image.tmdb.org/t/p/w500/${movie.poster_path}`" :alt="movie.title" class="home-movie-img">
