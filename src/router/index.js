@@ -12,7 +12,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/movie',
+    path: '/movie/:id',
     name: 'Movie',
     component: Movie,
     props: true

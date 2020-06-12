@@ -1,8 +1,8 @@
 <template>
     <div class="movie">
-        <Header/>
-        <section class="movie-info">
-            <img :src="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" :alt="movie.title" class="movie-info-img">
+        <Header />
+        <section v-if="movie" class="movie-info">
+            <img :src="`https://image.tmdb.org/t/p/w500/${movie.poster_path}`" :alt="movie.title" class="movie-info-img">
             <div class="movie-info-container">
                 <h1 class="movie-info-title">{{ movie.title }}</h1>
                 <h3 class="movie-info-release">Released: {{ movie.release_date }}</h3>
@@ -24,9 +24,26 @@ export default {
     components: {
         Header
     },
-    props: [
-        "movie"
-    ]
+    data() {
+        return {
+            movie: null
+        }
+    },
+    async created() {
+        const API_KEY = "c1bc2d59ec311674f1c2db8953212349";
+        const MOVIE_ID = this.$route.params.id;
+        const API_URL = `https://api.themoviedb.org/3/movie/${MOVIE_ID}?api_key=${API_KEY}`;
+
+        try {
+            const response = await fetch(API_URL);
+            const data = await response.json();
+
+            this.movie = data;
+
+        } catch (err) {
+            console.error(err);
+        }
+    }
 }
 </script>
 
